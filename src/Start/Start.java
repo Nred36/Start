@@ -1422,7 +1422,7 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                 }
             }
             if (mode == 6 && press == false) {//OPTIONS MENU
-
+                System.out.println("ff");
             }
             if (mode == 7 && press == false) {//Placer               
                 for (int r = 0; r < 27; r++) {
@@ -1446,43 +1446,30 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
     }
 
     @Override
-    public void mousePressed(MouseEvent e
-    ) {
-
+    public void mousePressed(MouseEvent e) {
     }
 
     @Override
-    public void mouseReleased(MouseEvent e
-    ) {
-        //
+    public void mouseReleased(MouseEvent e) {
     }
 
     @Override
-    public void mouseEntered(MouseEvent e
-    ) {
-        //
+    public void mouseEntered(MouseEvent e) {
     }
 
     @Override
-    public void mouseExited(MouseEvent e
-    ) {
-        //
+    public void mouseExited(MouseEvent e) {
     }
 
     @Override
-    public void mouseDragged(MouseEvent e
-    ) {
+    public void mouseDragged(MouseEvent e) {
         mX = e.getX();
         mY = e.getY();
-
     }
 
     @Override
-    public void mouseMoved(MouseEvent e
-    ) {
-
+    public void mouseMoved(MouseEvent e) {
         mX = e.getX();
         mY = e.getY();
-
     }
 }
