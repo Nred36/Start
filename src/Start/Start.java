@@ -195,8 +195,8 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
         f.pack();
         f.setLocation(400, -6);
         f.setVisible(true);
-        f.setResizable(false);
-        f.setSize(900, 862);
+        //f.setResizable(false);
+        f.setSize(910, 862);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //stops program if you x out the window    
     }
 
@@ -709,9 +709,11 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
             myPic.fillRect(845, 311, 30, 30);
 
             myPic.setColor(Color.black);
-            myPic.drawRect(843, 818, 33, 15);
-            myPic.drawString("Done", 845, 830);
+            myPic.drawRect(843, 618, 33, 15);
+            myPic.drawString("Done", 845, 630);
 
+            myPic.drawRect(843, 518, 33, 15);
+            myPic.drawString("Wipe", 845, 530);
             if (mapCurrent == 0) {
                 myPic.setColor(Color.GREEN);
                 myPic.fillRect(mX - 3, mY, 15, 15);
@@ -1303,8 +1305,8 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                 Rectangle t3 = new Rectangle(844, 186, 31, 31);
                 Rectangle t4 = new Rectangle(844, 248, 31, 31);
                 Rectangle t5 = new Rectangle(844, 310, 31, 31);
-                Rectangle dn = new Rectangle(843, 818, 33, 15);
-
+                Rectangle dn = new Rectangle(843, 618, 33, 15);
+                Rectangle cl = new Rectangle(843, 518, 33, 15);
                 if (m.intersects(t0)) {
                     mapCurrent = 0;
                 } else if (m.intersects(t1)) {
@@ -1347,6 +1349,13 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                     }
                     mode = 0;
                     pause = false;
+                } else if (m.intersects(cl)) {
+                    for (int r = 0; r < 27; r++) {
+                        for (int c = 0; c < 27; c++) {
+                            map[c][r] = 0;
+                        }
+                    }
+                    
                 }
                 press = true;
             }
