@@ -119,7 +119,7 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
             for (int i = 0; i < 24; i++) {
                 cost[i] = Integer.parseInt(br.readLine());
             }
-            System.out.println("Loaded");
+
         } catch (IOException a) {
             System.out.println("Couldn't Load");
         }
@@ -131,7 +131,7 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                     map[x][y] = Integer.parseInt(br.readLine());
                 }
             }
-            System.out.println("Loaded");
+
         } catch (IOException a) {
             System.out.println("Couldn't Load");
         }
@@ -176,7 +176,7 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
             }
             upgrades = Integer.parseInt(br.readLine());
             time = Integer.parseInt(br.readLine());
-            System.out.println("Loaded");
+
         } catch (IOException a) {
             System.out.println("Couldn't Load");
         }
@@ -197,7 +197,6 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
         f.setVisible(true);
         f.setResizable(false);
         f.setSize(900, 862);
-
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    //stops program if you x out the window    
     }
 
@@ -240,7 +239,7 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
 
                     Image pic = null;
                     if (map[y][x] == 0) {
-                        myPic.setColor(Color.GREEN);
+                        myPic.setColor(new Color(0, 153, 0));
                     } else if (map[y][x] == 1) {
                         pic = new ImageIcon("src\\Start\\pine.png").getImage();
                     } else if (map[y][x] == 2) {
@@ -248,9 +247,9 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                     } else if (map[y][x] == 3) {
                         myPic.setColor(Color.DARK_GRAY);
                     } else if (map[y][x] == 4) {
-                        myPic.setColor(Color.BLUE);
+                        myPic.setColor(new Color(0, 0, 153));
                     } else if (map[y][x] == 5) {
-                        myPic.setColor(Color.YELLOW);
+                        myPic.setColor(new Color(255, 255, 153));
                     }
 
                     /*if (grid[y][x] == 1) {
@@ -1370,7 +1369,7 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                                 map[x][y] = Integer.parseInt(br.readLine());
                             }
                         }
-                        System.out.println("Loaded");
+
                     } catch (IOException a) {
                         System.out.println("Couldn't Load");
                     }
@@ -1387,7 +1386,6 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                         }
                         upgrades = Integer.parseInt(br.readLine());
                         time = Integer.parseInt(br.readLine());
-                        System.out.println("Loaded");
 
                     } catch (IOException a) {
                         System.out.println("Couldn't Load");
@@ -1409,7 +1407,6 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                         }
                         upgrades = Integer.parseInt(br.readLine());
                         time = Integer.parseInt(br.readLine());
-                        System.out.println("Loaded");
 
                     } catch (IOException a) {
                         System.out.println("Couldn't Load");
