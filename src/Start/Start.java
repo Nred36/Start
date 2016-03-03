@@ -1324,9 +1324,13 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                 if (mapCurrent != 21) {
                     for (int r = 0; r < 27; r++) {
                         for (int c = -1; c < 27; c++) {
-                            Rectangle box = new Rectangle(r * 31 + 1, c * 31 + 1, 31, 31);
-                            if (m.intersects(box)) {
+                            Rectangle box1 = new Rectangle(r * 31 + 1, c * 31 + 1, 31, 31);
+                            Rectangle box2 = new Rectangle(c * 31 + 1, r * 31 + 1, 31, 31);
+                            if (m.intersects(box1)) {
                                 map[c][r] = mapCurrent;
+                            }
+                            if (m.intersects(box2)) {
+                                map[r][c] = mapCurrent;
                             }
                         }
                     }
@@ -1357,7 +1361,7 @@ public class Start extends JApplet implements ActionListener, KeyListener, Mouse
                     }
                     
                 }
-                press = true;
+                
             }
 
             //PLAY OPTION
